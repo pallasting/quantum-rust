@@ -1,0 +1,54 @@
+[package]
+name = "quantum-rust"
+version = "1.0.0"
+edition = "2021"
+authors = ["Quantum Rust Team <team@quantum-rust.org>"]
+license = "MIT OR Apache-2.0"
+description = "The world's first quantum-enhanced systems programming language"
+homepage = "https://quantum-rust.org"
+repository = "https://github.com/quantum-rust/quantum-rust"
+documentation = "https://docs.quantum-rust.org"
+keywords = ["quantum", "compiler", "systems", "performance", "rust"]
+categories = ["development-tools", "compilers", "science"]
+readme = "README.md"
+
+[features]
+default = ["quantum-core"]
+quantum-core = []
+quantum-algorithms = ["quantum-core"]
+arrow-optimization = []
+high-performance = ["quantum-algorithms", "arrow-optimization"]
+
+[dependencies]
+# Core dependencies would be listed here
+
+[dev-dependencies]
+# Development dependencies would be listed here
+
+[workspace]
+members = [
+    "quantum-rustc",
+    "quantum-cargo",
+    "quantum-std",
+]
+
+[[bin]]
+name = "quantum-rustc"
+path = "src/bin/quantum-rustc.rs"
+
+[[bin]]
+name = "quantum-cargo"
+path = "src/bin/quantum-cargo.rs"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+
+[profile.quantum]
+inherits = "release"
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"

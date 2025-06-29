@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "tag": "v1.0.0",
+  "name": "Quantum Rust v1.0.0 - First Quantum-Enhanced Release",
+  "prerelease": false,
+  "draft": false,
+  "assets": [
+    "quantum-rust-v1.0.0-linux-x86_64.tar.gz",
+    "quantum-rust-v1.0.0-universal.zip"
+  ]
+}
