@@ -37,7 +37,8 @@ Quantum Rust 是世界上第一个集成量子计算技术的系统编程语言�
 
 ```bash
 # 下载量子Rust发行版
-curl -sSf https://quantum-rust.org/install.sh | sh
+git clone https://github.com/pallasting/quantum-rust.git
+cd quantum-rust
 
 # 或者使用我们的安装脚本
 ./quantum-rust-dist/install.sh
