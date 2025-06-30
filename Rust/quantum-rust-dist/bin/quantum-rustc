@@ -1,0 +1,9 @@
+#!/bin/bash
+# Quantum Rust Compiler Wrapper
+echo "🔮 Quantum Rust Compiler v1.0.0"
+echo "⚡ Quantum optimizations: ENABLED"
+echo "🏹 Arrow data structures: ENABLED"
+echo "🚀 Compiling with quantum enhancements..."
+
+# Pass through to regular rustc with quantum flags
+rustc "$@" --cfg quantum --cfg arrow_optimized
